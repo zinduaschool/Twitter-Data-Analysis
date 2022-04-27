@@ -12,7 +12,7 @@ class Clean_Tweets:
         the data collection stage.  
         """
         unwanted_rows = df[df['retweet_count'] == 'retweet_count' ].index
-        df.drop(unwanted_rows , inplace=True)
+        self.df.drop(unwanted_rows , inplace=True)
         df = df[df['polarity'] != 'polarity']
         
         return df
